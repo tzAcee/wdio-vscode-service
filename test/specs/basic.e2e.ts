@@ -65,7 +65,7 @@ describe('WDIO VSCode Service', () => {
             expect(title).toContain('[Extension Development Host]')
             if (await browser.isVSCodeWebSession()) {
                 // works only in web session
-        //        expect(title).toContain('README.md')
+                // expect(title).toContain('README.md')
             } else {
                 // doesn't work in web session
                 expect(title).toContain('wdio-vscode-service')
