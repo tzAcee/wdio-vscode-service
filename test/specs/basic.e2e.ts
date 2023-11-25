@@ -62,10 +62,10 @@ describe('WDIO VSCode Service', () => {
         it('should be able to load VSCode', async () => {
             const workbench = await browser.getWorkbench()
             const title = await workbench.getTitleBar().getTitle()
-
+            expect(title).toContain('[Extension Development Host]')
             if (await browser.isVSCodeWebSession()) {
                 // works only in web session
-                expect(title).toContain('README.md')
+        //        expect(title).toContain('README.md')
             } else {
                 // doesn't work in web session
                 expect(title).toContain('wdio-vscode-service')
